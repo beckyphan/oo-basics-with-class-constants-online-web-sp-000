@@ -6,12 +6,16 @@ class Shoe
 
   def initialize(brand)
     @brand = brand
+    add_new_brand(brand)
+  end
+  
+  def add_new_brand(brand)
     if BRANDS.include?(brand)
       return
     else
       BRANDS << brand
     end
-  end
+  end 
 
   def cobble
     self.condition = "new"
